@@ -7,6 +7,9 @@
 4) git remote add origin link_to_your_repository  |Добавление репозитория
 
 5) git status       | Статус проекта
-6) git add .        |
-7) git commit -m "lesson1_m2 added".   |Описание изменений
-8) git push origin master
+6) git add .        | Сохранение
+
+7) git commit -m "lesson1_m2 added".   |Описание изменений/ Сохранение
+7) git commit -m "update GitHelp.txt"  |Сохранение
+
+8) git push origin master. |Отправка изменения/ Сохранение

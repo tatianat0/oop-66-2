@@ -27,8 +27,29 @@ class Hero:
          self.health = health
          self.strength = strength
 
+     def greet(self):
+         return f'Привет, Я {self.name}, мой уровень {self.level} '
+
+     def attack(self, amount):
+         self.strength -= amount
+         return f'{self.name}, наносит удар! Сила: {self.strength}'
+
+     def rest(self, amount):
+         self.health += amount
+         return f'{self.name} отдыхает... Здоровье: {self.health}'
+
+
 
 mario = Hero("Mario", 1, 10, 100)
-sora = Hero("Sora", 2, 10, 100)
-print(mario.health)
-print(sora.health)
+sora = Hero("Sora", 2, 5, 80)
+
+
+print(mario.greet())
+print(mario.attack(1))
+print(mario.rest(1))
+
+print(sora.greet())
+print(sora.attack(1))
+print(sora.rest(1))
+
+
