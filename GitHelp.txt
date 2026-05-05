@@ -8,3 +8,5 @@
 
 5) git status       | Статус проекта
 6) git add .        |
+7) git commit -m "lesson1_m2 added".   |Описание изменений
+8) git push origin master
