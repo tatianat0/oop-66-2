@@ -42,3 +42,6 @@ print(kass.rest(2))
 print(lilit.greet())
 print(lilit.attack())
 print(lilit.rest(2))
+
+# Мини-игра "Камень, Ножницы, Бумага"
+w
