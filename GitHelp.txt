@@ -10,10 +10,10 @@
 6) git add .        | Сохранение
 6) git add . или путь к файлу
 
-7) git commit -m "lesson1_m2 added".   |Описание изменений/ Сохранение
-7) git commit -m "update GitHelp.txt"  |Сохранение
+7) git commit -m "lesson1_m2 added".   |Описание изменений/ Сохранение- добавление
+7) git commit -m "update GitHelp.txt"  |Сохранение - обновление
 
 8) git push origin master |Отправка изменения/ Сохранение
 
-9) git restore . или путь к файлу
-9) git reset . или путь к файлу
+9) git restore. |или путь к файлу
+9) git reset. |или путь к файлу

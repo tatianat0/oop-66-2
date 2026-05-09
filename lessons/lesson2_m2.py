@@ -67,6 +67,3 @@ class D(C, B):
         super().action()
         print('D')
 
-test_obj = D()
-
-print(D.__mro__)
