@@ -1,4 +1,5 @@
 # Домашнее задание № 2
+import random
 from HomeWork.homework1_m2 import Hero
 
 
@@ -44,3 +45,36 @@ print(lilit.attack())
 print(lilit.rest(2))
 
 # Мини-игра "Камень, Ножницы, Бумага"
+
+print("Добро пожаловать в игру!")
+print("Выберите героя:")
+print("1 - Warrior")
+print("2 - Mage")
+print("3 - Assassin")
+
+choice = input("Ваш выбор (1/2/3): ")
+
+if choice == "1":
+    my_hero = "Warrior"
+elif choice == "2":
+    my_hero = "Mage"
+elif choice == "3":
+    my_hero = "Assassin"
+else:
+    print("Неверный выбор!")
+
+opponents = ["Warrior", "Mage", "Assassin"]
+opponents.remove(my_hero)
+enemy = random.choice(opponents)
+
+print(f"\nВы выбрали: {my_hero}")
+print(f"Противник: {enemy}")
+
+if my_hero == "Warrior" and enemy == "Assassin":
+    print("Warrior победил!")
+elif my_hero == "Assassin" and enemy == "Mage":
+    print("Assassin победил!")
+elif my_hero == "Mage" and enemy == "Warrior":
+    print("Mage победил!")
+else:
+    print(f"{enemy} победил!")
