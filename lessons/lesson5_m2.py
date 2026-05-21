@@ -1,64 +1,67 @@
-"""Урок №5 Декораторы venv"""
+"""Урок №5 Декораторы |venv"""
 # Декораторы — это функции, которые принимают другую функцию и расширяют её поведение, не изменяя её код.
+# Виды декоратора
 
-#
-# def simple_decorator(func):
-#     def wrapper():
-#         print("До выполнения!!")
-#         func()
-#         print("после выполнения!!")
-#     return wrapper
-#
-# @simple_decorator
-# def say_hello():
-#     print("Hello!!")
-#
-# # say_hello()
-#
-# # 3
-# def greeting_decorator(func):
-#     # 4
-#     def wrapper(name):
-#         print(f"{name} Привет!!") # 5
-#         func(name) # 6
-#     return wrapper # 7
-#
-# @greeting_decorator #2
-# def greet(name):
-#     print(f"{name} как дела ?")
-#
-# # greet("Ardager") #1
+
+def simple_decorator(func):
+    def wrapper():
+        print("До выполнения!!")
+        func()
+        print("После выполнения!!")
+    return wrapper
+
+@simple_decorator
+def say_hello():
+    print("Hello!!")
+
+say_hello()
+
+
+def greeting_decorator(func):     # 3
+
+    def wrapper(name):            # 4
+        print(f"{name} Привет!!") # 5
+        func(name)                # 6
+    return wrapper                # 7
+
+@greeting_decorator               # 2
+def greet(name):
+    print(f"{name} как дела ?")
+
+greet("Ardager")                  # 1
 #
 # # @greeting_decorator
 # # def tttt(arg):
-#
-# def repeat_decorator(n):
-#     def decorator(func):
-#         def wrapper():
-#             for i in range(n):
-#                 func()
-#         return wrapper
-#     return decorator
-#
-# @repeat_decorator(5)
-# def hi():
-#     print('HI!!')
-# # hi()
-#
-# def class_decorator(cls):
-#     class NewClass(cls):
-#         def action1(self):
-#             print("New action!!")
-#     return NewClass
-#
-# # @class_decorator
-# class OldClass:
-#     def action(self):
-#         print('Old action!!')
-# test_obj = OldClass()
-# # test_obj.action()
-# # test_obj.action1()
-# print(type(test_obj))
+
+# Декоратор, который ожидает какие-то параметры:
+def repeat_decorator(n):
+    def decorator(func):
+        def wrapper():
+            for i in range(n):
+                func()
+        return wrapper
+    return decorator
+
+@repeat_decorator(5)
+def hi():
+    print('HI!!')
+hi()
+
+# Декоратор для классов:
+def class_decorator(cls):
+    class NewClass(cls):
+        def action1(self):
+            print("New action!!")
+    return NewClass
+
+@class_decorator
+class OldClass:
+    def action(self):
+        print('Old action!!')
+test_obj = OldClass()
+test_obj.action()
+test_obj.action1()
+print(type(test_obj))
 #
 # # def is_admin():
 # #     pass
@@ -176,3 +179,8 @@ wrapper()               ← вызывается обёртка
   → print("До")
   → func()              ← внутри вызывается оригинал
   → print("После") """
+
+"""venv"""
+# Как скачивать библиотеки, модули, пакеты
+# Модуль - это любой python файл (файл.py). После модулей идут пакеты.
+# Пакеты - это любая директория, которая хранит у себе модуль или несколько модулей- автоматически становиться пакетом

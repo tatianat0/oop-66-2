@@ -1,0 +1,4 @@
+requests
+faker
+colorama
+random2

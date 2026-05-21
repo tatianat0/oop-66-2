@@ -17,3 +17,30 @@
 
 9) git restore. |или путь к файлу
 9) git reset. |или путь к файлу
+
+10) git branch
+11) git branch name_branch
+12) git switch name_branch
+
+
+
+production
+test|stage
+dev
+
+feat/register
+feat/booking
+
+"feat: added register code"
+"update: update register code"
+"fix: delete bag"
+"HotFix: delete bag"
+
+
+py -m venv name_venv
+python -m venv name_venv
+python3 -m venv name_venv
+
+source name_venv/bin/activate
+name_venv\Scripts\activate
+source name_venv\Scripts\activate
