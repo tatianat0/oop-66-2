@@ -1,5 +1,5 @@
 .idea
-main.py
+my_package/main.py
 venv
 .venv
 __pycache__
