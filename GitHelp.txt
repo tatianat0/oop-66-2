@@ -18,10 +18,10 @@
 9) git restore. |или путь к файлу
 9) git reset. |или путь к файлу
 
-10) git branch
+10) git branch | покажет все ветки
 11) git branch name_branch
 12) git switch name_branch
-
+13) git clone ссылка на проект
 
 
 production
@@ -36,11 +36,22 @@ feat/booking
 "fix: delete bag"
 "HotFix: delete bag"
 
-
+# Для каждого проекта создается отдельное виртуальное окружение
+# подключение venv:
 py -m venv name_venv
-python -m venv name_venv
+python -m venv name_venv   | python -m venv my_venv     # для macBook
 python3 -m venv name_venv
 
-source name_venv/bin/activate
+# Включение виртуального окружения:
+source name_venv/bin/activate                          # для macBook
 name_venv\Scripts\activate
 source name_venv\Scripts\activate
+
+# Скачивание внешнего модуля, библиотеки:
+pip install
+
+# Примеры:
+pip install requests      # HTTP-запросы
+pip install faker         # Фейковые данные
+pip install colorama      # Цветной текст в терминале
+pip install random2       # Случайные числа
